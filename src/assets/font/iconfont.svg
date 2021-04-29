@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="wodemima" unicode="&#58945;" d="M358.4 640c0 84.48 69.12 153.6 153.6 153.6s153.6-69.12 153.6-153.6v-102.4h102.4v102.4c0 140.8-115.2 256-256 256S256 780.8 256 640v-102.4h102.4v102.4zM870.4 486.4H153.6c-28.16 0-51.2-23.04-51.2-51.2v-512c0-28.16 23.04-51.2 51.2-51.2h716.8c28.16 0 51.2 23.04 51.2 51.2V435.2c0 28.16-23.04 51.2-51.2 51.2zM563.2 102.4c0-28.16-23.04-51.2-51.2-51.2s-51.2 23.04-51.2 51.2v153.6c0 28.16 23.04 51.2 51.2 51.2s51.2-23.04 51.2-51.2v-153.6z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="accounton" unicode="&#58912;" d="M512 821.333333a224 224 0 1 1 0-448 224 224 0 0 1 0 448z m-42.666667-490.666666A330.666667 330.666667 0 0 1 138.666667 0v-42.666667c0-17.664 14.336-32 32-32h682.666666a32 32 0 0 1 32 32v42.666667A330.666667 330.666667 0 0 1 554.666667 330.666667h-85.333334z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>
