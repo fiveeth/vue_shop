@@ -11,23 +11,6 @@
     <!-- 主体区域 -->
     <el-container>
       <!-- 侧边栏 -->
-<<<<<<< HEAD
-      <el-aside width="200px">
-        <el-menu
-          background-color="#333744"
-          text-color="#fff"
-          active-text-color="#ffd04b"
-        >
-          <el-submenu index="1">
-            <template slot="title">
-              <i class="el-icon-user"></i>
-              <span>导航一</span>
-            </template>
-            <el-menu-item index="1-1">
-              <template slot="title">
-                <i class="el-icon-location"></i>
-                <span>导航一</span> 
-=======
       <el-aside :width="isCollapse ? '64px' : '200px'">
         <el-menu
           background-color="#333744"
@@ -58,20 +41,15 @@
               <template slot="title">
                 <i class="el-icon-menu"></i>
                 <span>{{ subItem.authName }}</span>
->>>>>>> dev
               </template>
             </el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>
       <!-- 右侧内容主体 -->
-<<<<<<< HEAD
-      <el-main>Main</el-main>
-=======
       <el-main>
         <router-view></router-view>
       </el-main>
->>>>>>> dev
     </el-container>
   </el-container>
 </template>
@@ -81,9 +59,6 @@ export default {
   name: 'Home',
   data: function() {
     return {
-<<<<<<< HEAD
-      menuList: []
-=======
       menuList: [],
       iconObj: {
         '125': 'iconfont icon-user',
@@ -94,15 +69,11 @@ export default {
       },
       isCollapse: false,
       activePath: ''
->>>>>>> dev
     };
   },
   created() {
     this.getMenuList();
-<<<<<<< HEAD
-=======
     this.activePath = window.sessionStorage.getItem('activePath');
->>>>>>> dev
   },
   methods: {
     logout: function() {
@@ -115,8 +86,6 @@ export default {
         this.$message.error(res.meta.msg);
       }
       this.menuList = res.data;
-<<<<<<< HEAD
-=======
     },
     toggleCollapse: function() {
       this.isCollapse = !this.isCollapse;
@@ -124,7 +93,6 @@ export default {
     saveNavPath: function(activePath) {
       window.sessionStorage.setItem('activePath', activePath);
       this.activePath = activePath;
->>>>>>> dev
     }
   }
 };
@@ -156,19 +124,14 @@ export default {
 
 .el-aside {
   background-color: #333744;
-<<<<<<< HEAD
-=======
   .el-menu {
     border-right: none;
   }
->>>>>>> dev
 }
 
 .el-main {
   background-color: #eaedf1;
 }
-<<<<<<< HEAD
-=======
 
 .iconfont {
   margin-right: 10px;
@@ -183,5 +146,4 @@ export default {
   text-align: center;
   cursor: pointer;
 }
->>>>>>> dev
 </style>
