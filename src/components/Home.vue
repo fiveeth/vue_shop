@@ -11,6 +11,7 @@
     <!-- 主体区域 -->
     <el-container>
       <!-- 侧边栏 -->
+<<<<<<< HEAD
       <el-aside width="200px">
         <el-menu
           background-color="#333744"
@@ -26,13 +27,51 @@
               <template slot="title">
                 <i class="el-icon-location"></i>
                 <span>导航一</span> 
+=======
+      <el-aside :width="isCollapse ? '64px' : '200px'">
+        <el-menu
+          background-color="#333744"
+          text-color="#fff"
+          active-text-color="#409eff"
+          :unique-opened="true"
+          :collapse-transition="false"
+          :collapse="isCollapse"
+          :router="true"
+          :default-active="activePath"
+        >
+          <div class="toggle_bottun" @click="toggleCollapse">|||</div>
+          <el-submenu
+            :index="item.id + ''"
+            v-for="item in menuList"
+            :key="item.id"
+          >
+            <template slot="title">
+              <i :class="iconObj[item.id]"></i>
+              <span>{{ item.authName }}</span>
+            </template>
+            <el-menu-item
+              :index="'/' + subItem.path"
+              v-for="subItem in item.children"
+              :key="subItem.id"
+              @click="saveNavPath('/' + subItem.path)"
+            >
+              <template slot="title">
+                <i class="el-icon-menu"></i>
+                <span>{{ subItem.authName }}</span>
+>>>>>>> dev
               </template>
             </el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>
       <!-- 右侧内容主体 -->
+<<<<<<< HEAD
       <el-main>Main</el-main>
+=======
+      <el-main>
+        <router-view></router-view>
+      </el-main>
+>>>>>>> dev
     </el-container>
   </el-container>
 </template>
@@ -42,11 +81,28 @@ export default {
   name: 'Home',
   data: function() {
     return {
+<<<<<<< HEAD
       menuList: []
+=======
+      menuList: [],
+      iconObj: {
+        '125': 'iconfont icon-user',
+        '103': 'iconfont icon-tijikongjian',
+        '101': 'iconfont icon-shangpin',
+        '102': 'iconfont icon-danju',
+        '145': 'iconfont icon-baobiao'
+      },
+      isCollapse: false,
+      activePath: ''
+>>>>>>> dev
     };
   },
   created() {
     this.getMenuList();
+<<<<<<< HEAD
+=======
+    this.activePath = window.sessionStorage.getItem('activePath');
+>>>>>>> dev
   },
   methods: {
     logout: function() {
@@ -59,6 +115,16 @@ export default {
         this.$message.error(res.meta.msg);
       }
       this.menuList = res.data;
+<<<<<<< HEAD
+=======
+    },
+    toggleCollapse: function() {
+      this.isCollapse = !this.isCollapse;
+    },
+    saveNavPath: function(activePath) {
+      window.sessionStorage.setItem('activePath', activePath);
+      this.activePath = activePath;
+>>>>>>> dev
     }
   }
 };
@@ -90,9 +156,32 @@ export default {
 
 .el-aside {
   background-color: #333744;
+<<<<<<< HEAD
+=======
+  .el-menu {
+    border-right: none;
+  }
+>>>>>>> dev
 }
 
 .el-main {
   background-color: #eaedf1;
 }
+<<<<<<< HEAD
+=======
+
+.iconfont {
+  margin-right: 10px;
+}
+
+.toggle_bottun {
+  background-color: #4a5064;
+  color: #fff;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: center;
+  cursor: pointer;
+}
+>>>>>>> dev
 </style>
